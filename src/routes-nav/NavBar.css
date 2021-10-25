@@ -1,0 +1,16 @@
+.NavBar {
+  background-color: peachpuff;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.125);
+}
+
+.NavBar-right a {
+  padding-left: 1rem;
+}
+
+.NavBar-link.active {
+  font-weight: bold;
+  color: black;
+}

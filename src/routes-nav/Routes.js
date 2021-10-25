@@ -1,11 +1,11 @@
 import { Switch, Route, Redirect } from "react-router-dom";
-import Company from "./Company";
-import CompaniesList from "./CompaniesList";
-import JobsList from "./JobsList";
-import LoginForm from "./LoginForm";
-import SignupForm from "./SignupForm";
-import Profile from "./Profile";
-import Home from "./Home";
+import Company from "../companies/Company";
+import CompaniesList from "../companies/CompaniesList";
+import JobsList from "../jobs/JobsList";
+import LoginForm from "../auth/LoginForm";
+import SignupForm from "../auth/SignupForm";
+import Profile from "../profile/Profile";
+import Home from "../homepage/Home";
 
 const Routes = () => {
   return (

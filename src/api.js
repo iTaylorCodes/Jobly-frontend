@@ -39,7 +39,7 @@ class JoblyApi {
     return res.company;
   }
 
-  /** Get comapnies (filtered by name if not undefined) */
+  /** Get companies (filtered by name if not undefined) */
 
   static async getCompanies(name) {
     let res = await this.request("companies", { name });
@@ -88,10 +88,10 @@ class JoblyApi {
   }
 }
 
-// // for now, put token ("testuser" / "password" on class)
-// JoblyApi.token =
-//   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZ" +
-//   "SI6InRlc3R1c2VyIiwiaXNBZG1pbiI6ZmFsc2UsImlhdCI6MTU5ODE1OTI1OX0." +
-//   "FtrMwBQwe6Ue-glIFgz_Nf8XxRT2YecFCiSpYL0fCXc";
+// for now, put token ("testuser" / "password" on class)
+JoblyApi.token =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZ" +
+  "SI6InRlc3R1c2VyIiwiaXNBZG1pbiI6ZmFsc2UsImlhdCI6MTU5ODE1OTI1OX0." +
+  "FtrMwBQwe6Ue-glIFgz_Nf8XxRT2YecFCiSpYL0fCXc";
 
 export default JoblyApi;

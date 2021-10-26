@@ -11,25 +11,25 @@ import "./NavBar.css";
 
 const NavBar = ({ logout }) => {
   const currentUser = undefined; /* useContext(UserContext); */
-  if (!currentUser) {
-    return (
-      <nav className="NavBar">
-        <div className="NavBar-left">
-          <NavLink exact to="/" className="NavBar-link">
-            Jobly
-          </NavLink>
-        </div>
-        <div className="NavBar-right">
-          <NavLink exact to="/login" className="NavBar-link">
-            Login
-          </NavLink>
-          <NavLink exact to="/signup" className="NavBar-link">
-            Signup
-          </NavLink>
-        </div>
-      </nav>
-    );
-  }
+  // if (!currentUser) {
+  //   return (
+  //     <nav className="NavBar">
+  //       <div className="NavBar-left">
+  //         <NavLink exact to="/" className="NavBar-link">
+  //           Jobly
+  //         </NavLink>
+  //       </div>
+  //       <div className="NavBar-right">
+  //         <NavLink exact to="/login" className="NavBar-link">
+  //           Login
+  //         </NavLink>
+  //         <NavLink exact to="/signup" className="NavBar-link">
+  //           Signup
+  //         </NavLink>
+  //       </div>
+  //     </nav>
+  //   );
+  // }
   return (
     <nav className="NavBar">
       <div className="NavBar-left">

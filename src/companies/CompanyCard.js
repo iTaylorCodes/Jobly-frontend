@@ -9,12 +9,16 @@ import "./CompanyCard.css";
 const CompanyCard = ({ handle, name, logoUrl, description }) => {
   return (
     <Link className="CompanyCard card" to={`/companies/${handle}`}>
-      <div>
-        <h5>
+      <div className="card-body">
+        <h5 className="card-title">
           {name}
-          {logoUrl && <img src={logoUrl} alt={name} />}
+          {logoUrl && (
+            <img src={logoUrl} alt={name} className="float-right ml-5" />
+          )}
         </h5>
-        <p>{description}</p>
+        <p>
+          <small>{description}</small>
+        </p>
       </div>
     </Link>
   );

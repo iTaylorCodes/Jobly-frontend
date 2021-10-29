@@ -15,7 +15,7 @@ import CompanyCard from "./CompanyCard";
  */
 
 const CompaniesList = () => {
-  const [companies, setCompanies] = useState(null);
+  const [companies, setCompanies] = useState([]);
 
   const search = async (name) => {
     let returnedCompanies = await JoblyApi.getCompanies(name);

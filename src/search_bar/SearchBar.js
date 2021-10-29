@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./SearchBar.css";
 
 /** Search Bar.
  *
@@ -22,16 +23,18 @@ const SearchBar = ({ search }) => {
 
   return (
     <div className="SearchBar">
-      <form className="SearchBar-form form-inline" onSubmit={handleSubmit}>
-        <input
-          className="form-control form-control-lg flex-grow-1"
-          name="searchTerm"
-          value={searchTerm}
-          placeholder="Looking for something?"
-          onChange={handleChange}
-        />
-        <button className="btn btn-lg btn-primary" type="submit">
-          Search!
+      <form className="SearchBar-form input-group" onSubmit={handleSubmit}>
+        <div className="form-outline">
+          <input
+            className="form-control"
+            name="searchTerm"
+            value={searchTerm}
+            placeholder="Search"
+            onChange={handleChange}
+          />
+        </div>
+        <button className="btn btn-primary" type="submit">
+          <i className="fa fa-search"></i>
         </button>
       </form>
     </div>

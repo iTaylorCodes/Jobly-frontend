@@ -14,7 +14,7 @@ import JobCardList from "../jobs/JobCardList";
 
 const Company = () => {
   const { handle } = useParams();
-  const [company, setCompany] = useState(null);
+  const [company, setCompany] = useState([]);
 
   useEffect(() => {
     const getCompany = async () => {
@@ -27,7 +27,7 @@ const Company = () => {
     <div className="Company">
       <h2>{company.name}</h2>
       <p>{company.description}</p>
-      <JobCardList jobs={company.jobs} />
+      {company.jobs ? <JobCardList jobs={company.jobs} /> : ""}
     </div>
   );
 };

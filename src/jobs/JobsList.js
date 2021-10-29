@@ -4,7 +4,7 @@ import JobCardList from "./JobCardList";
 import JoblyApi from "../api";
 
 const JobsList = () => {
-  const [jobs, setJobs] = useState(null);
+  const [jobs, setJobs] = useState([]);
 
   useEffect(() => {
     search();

@@ -1,5 +1,5 @@
 .NavBar {
-  background-color: peachpuff;
+  background-color: #7fdbff;
   display: flex;
   justify-content: space-between;
   padding: 1rem;
@@ -10,7 +10,16 @@
   padding-left: 1rem;
 }
 
+.NavBar-link {
+  text-shadow: 1px 1px black;
+  color: white;
+  font-size: large;
+  font-weight: 600;
+  text-decoration: none;
+}
+
 .NavBar-link.active {
-  font-weight: bold;
+  font-weight: 900;
+  text-shadow: 1px 1px white;
   color: black;
 }

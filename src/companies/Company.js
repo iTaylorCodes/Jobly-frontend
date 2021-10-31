@@ -24,10 +24,12 @@ const Company = () => {
   }, [handle]);
 
   return (
-    <div className="Company">
-      <h2>{company.name}</h2>
-      <p>{company.description}</p>
-      {company.jobs ? <JobCardList jobs={company.jobs} /> : ""}
+    <div className="row justify-content-center" style={{ textAlign: "center" }}>
+      <div className="col-md-7 col-lg-5 col-sm-10 col-12">
+        <h2>{company.name}</h2>
+        <p>{company.description}</p>
+        {company.jobs ? <JobCardList jobs={company.jobs} /> : ""}
+      </div>
     </div>
   );
 };

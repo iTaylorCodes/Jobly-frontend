@@ -32,18 +32,19 @@ const CompaniesList = () => {
       handle={company.handle}
       name={company.name}
       description={company.description}
-      logoUrl={company.logoUrl}
     />
   ));
 
   return (
-    <div className="CompaniesList">
-      <SearchBar search={search} />
-      {companies.length ? (
-        <div className="CompaniesList-list">{companiesList}</div>
-      ) : (
-        <p>No results found.</p>
-      )}
+    <div className="row justify-content-center" style={{ textAlign: "center" }}>
+      <div className="col-md-7 col-lg-5 col-sm-10 col-12">
+        <SearchBar search={search} />
+        {companies.length ? (
+          <div className="CompaniesList-list">{companiesList}</div>
+        ) : (
+          <p className="lead">No results found.</p>
+        )}
+      </div>
     </div>
   );
 };

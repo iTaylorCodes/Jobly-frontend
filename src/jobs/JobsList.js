@@ -16,10 +16,12 @@ const JobsList = () => {
   };
 
   return (
-    <div className="JobsList">
-      <SearchBar search={search} />
-      <div className="JobsList-list">
-        <JobCardList jobs={jobs} />
+    <div className="row justify-content-center" style={{ textAlign: "center" }}>
+      <div className="col-md-7 col-lg-5 col-sm-10 col-12">
+        <SearchBar search={search} />
+        <div className="JobsList-list">
+          <JobCardList jobs={jobs} />
+        </div>
       </div>
     </div>
   );

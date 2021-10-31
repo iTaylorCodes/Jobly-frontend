@@ -5,8 +5,6 @@
   border-radius: 0;
   border: none;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  width: 35rem;
-  display: inline-flex;
 }
 
 .JobCard button:hover {

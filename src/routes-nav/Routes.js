@@ -1,4 +1,5 @@
 import { Switch, Route, Redirect } from "react-router-dom";
+import PrivateRoute from "./PrivateRoute";
 import Company from "../companies/Company";
 import CompaniesList from "../companies/CompaniesList";
 import JobsList from "../jobs/JobsList";
@@ -7,33 +8,37 @@ import SignupForm from "../auth/SignupForm";
 import Profile from "../profile/Profile";
 import Home from "../homepage/Home";
 
-const Routes = () => {
+const Routes = ({ login, signup }) => {
   return (
     <Switch>
-      <Route exact path="/companies/:handle">
+      <PrivateRoute exact path="/companies/:handle">
         <Company />
-      </Route>
-      <Route exact path="/companies">
+      </PrivateRoute>
+
+      <PrivateRoute exact path="/companies">
         <CompaniesList />
-      </Route>
-      <Route exact path="/jobs">
+      </PrivateRoute>
+
+      <PrivateRoute exact path="/jobs">
         <JobsList />
-      </Route>
+      </PrivateRoute>
+
       <Route exact path="/login">
-        <LoginForm />
+        <LoginForm login={login} />
       </Route>
+
       <Route exact path="/signup">
-        <SignupForm />
+        <SignupForm signup={signup} />
       </Route>
-      <Route exact path="/profile">
+
+      <PrivateRoute exact path="/profile">
         <Profile />
-      </Route>
-      <Route exact path="/logout">
-        <Home />
-      </Route>
+      </PrivateRoute>
+
       <Route exact path="/">
         <Home />
       </Route>
+
       <Redirect to="/" />
     </Switch>
   );
